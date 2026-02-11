@@ -1,0 +1,26 @@
+{
+  "page": {
+    "size": {
+      "$value": "A4",
+      "$type": "dimension"
+    },
+    "margin": {
+      "top": {
+        "$value": "90pt",
+        "$type": "dimension"
+      },
+      "side": {
+        "$value": "34pt",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "28.3pt",
+        "$type": "dimension"
+      }
+    },
+    "maxWidth": {
+      "$value": "527.2pt",
+      "$type": "dimension"
+    }
+  }
+}

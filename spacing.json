@@ -1,0 +1,28 @@
+{
+  "spacing": {
+    "xs": {
+      "$value": "2pt",
+      "$type": "dimension"
+    },
+    "sm": {
+      "$value": "4pt",
+      "$type": "dimension"
+    },
+    "md": {
+      "$value": "10pt",
+      "$type": "dimension"
+    },
+    "lg": {
+      "$value": "14pt",
+      "$type": "dimension"
+    },
+    "xl": {
+      "$value": "18pt",
+      "$type": "dimension"
+    },
+    "2xl": {
+      "$value": "30pt",
+      "$type": "dimension"
+    }
+  }
+}
