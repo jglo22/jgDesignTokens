@@ -1,89 +1,81 @@
 @import url('../tokens.css');
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-0);
-  line-height: var(--font-lineHeight-normal);
+* {
   color: var(--uxC__greys-900);
   max-width: 860px;
-  margin: 0 auto;
-  padding: 40px;
+  margin: 0px;
+  padding: 0px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: var(--border-width-default) var(--border-style-default) var(--uxC__greys-900);
-}
-
-header > div:first-child {
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-9);
-  font-weight: var(--font-weight-black);
-  line-height: 1.0;
-  color: var(--uxC__greys-900);
-}
-
-header > div:last-child {
-  text-align: right;
-  font-size: var(--font-size--1);
-  line-height: var(--font-lineHeight-normal);
-  color: var(--uxC__greys-900);
-}
 
 h1 {
   font-family: var(--font-family-display);
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-9);
   font-weight: var(--font-weight-black);
-  line-height: var(--font-lineHeight-tight);
   color: var(--uxC__greys-900);
   border-bottom: var(--border-width-default) var(--border-style-default) var(--uxC__greys-900);
 }
 
 h2 {
   font-family: var(--font-family-display);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--font-lineHeight-tight);
+  color: var(--uxC__greys-900);
+  padding-bottom: var(--spacing-space-L);
+  margin-top: var(--spacing-space-L);
+  margin-bottom: var(--spacing-space-XL);
+  border-bottom: var(--border-width-default) var(--border-style-default) var(--uxC__greys-300);
+}
+
+.test p, .test ul li {
+  font-family: var(--font-family-display);
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-bold);
   line-height: var(--font-lineHeight-tight);
-  color: var(--uxC__greys-900);
+  color: var(--uxC__greys-700);
+  margin-top: var(--spacing-space-XL); 
 }
 
-h2:has(strong) {
-  font-size: var(--font-size-0);
-  font-weight: var(--font-weight-regular);
-  color: var(--uxC__greys-900);
-}
-
-h2:has(strong) strong {
-  font-weight: var(--font-weight-extrabold);
-  color: var(--uxC__greys-900);
+.test ul li
+{
+  margin-top: 0px;
 }
 
 h3 {
   font-family: var(--font-family-display);
-  font-size: var(--font-size-1);
-  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-regular);
   line-height: var(--font-lineHeight-tight);
   color: var(--uxC__greys-900);
 }
 
-h2:not(:has(strong)) + h3 {
-  font-size: var(--font-size-0);
-  font-weight: var(--font-weight-regular);
+h3 strong {
+  font-weight: var(--font-weight-black);
+}
+
+h4 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--font-lineHeight-tight);
   color: var(--uxC__greys-900);
+  margin-top: var(--spacing-space-XL); 
 }
 
 p {
   font-family: var(--font-family-body);
   font-size: var(--font-size-0);
-  line-height: var(--font-lineHeight-normal);
+  line-height: var(--font-lineHeight-normal); 
   color: var(--uxC__greys-900);
+  margin-top: var(--spacing-space-XL); 
 }
 
-ul, ol { padding-left: 20px; }
+ul, ol {
+   padding-left: 20px;
+   margin-bottom: var(--spacing-space-XL); 
+}
 
 li {
   font-family: var(--font-family-body);
