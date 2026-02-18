@@ -49,12 +49,12 @@
 
   /* spacing */
   --spacing-space-zero: 0px;
-  --spacing-space-S: 2px;
-  --spacing-space-M: 4px;
-  --spacing-space-L: 8px;
-  --spacing-space-XL: 16px;
-  --spacing-space-2L-DEFAULT: 32px;
-  --spacing-space-3XL: 64px;
+  --spacing-space-S: 0px;
+  --spacing-space-M: 0px;
+  --spacing-space-L: 0px;
+  --spacing-space-XL: 0px;
+  --spacing-space-2L-DEFAULT: 0px;
+  --spacing-space-3XL: 0px;
 
   /* border */
   --border-width-default: 1px;
