@@ -10,22 +10,23 @@ W3C DTCG format design tokens defining Jim's visual identity. Token files + use-
 
 ## Current state
 
-Simplified architecture agreed. Token files edited directly in the public repo. Use-case CSS files (`cv.css`, `website.css` etc.) live in same public repo. `sample.html` visual preview also in public repo.
+Tokens-only repo. `tokens.css` renamed to `variables.css`. Use-case CSS files (e.g. `cv.css`) moved out — they now live alongside their consumers (e.g. `lifeOS/features/cvBuilder/`). `sample.html` visual preview remains here. `variables.css` is duplicated into each consumer repo at build time.
 
 ## Decisions made
 
 1. **W3C DTCG format** — industry standard, tool-agnostic
 2. **Split token files** — organised by category (color, typography, spacing, border, page)
-3. **Tokens + stylesheets in one public repo** (`jgTokensAndStylesheets`) — public so Figma, browsers, and future tools can pull directly
+3. **Tokens-only public repo** (`jgTokensAndStylesheets`) — use-case CSS files live with their consumers, not here
 4. **Token units stored as px** — CSS files handle any conversion needed per medium
-5. **Use-case CSS files** — `cv.css`, `website.css` etc. each handle their own layout/print rules alongside token consumption
-6. **No context mapping** — no `print.json` / `digital.json`; per-medium decisions handled in each CSS file
+5. **No context mapping** — no `print.json` / `digital.json`; per-medium decisions handled in each consumer's CSS
+6. **`variables.css` duplicated per consumer** — local copy used at build time; updated manually when tokens change
+7. **`tokens.css` renamed to `variables.css`** — clearer name, less confusion with JSON token files
 
 ## What consumes these tokens
 
 | Consumer | Where | How |
 |----------|-------|-----|
-| CV builder | `cv.css` in public repo | CSS custom properties, px→pt conversion in CSS |
+| CV builder | `lifeOS/features/cvBuilder/variables.css` (local duplicate) | Copied from here when tokens change |
 | sample.html | Public repo | Token values embedded directly for browser preview |
 | Figma (future) | `tokens.json` via GitHub | Tokens Studio plugin |
 | Website (future) | `tokens.json` via GitHub | Fetched as raw URL |
@@ -36,6 +37,6 @@ Simplified architecture agreed. Token files edited directly in the public repo. 
 
 ## Updates
 
+- 2026-03-02 by Claude (Sonnet 4.6) [desktop] — renamed tokens.css → variables.css, moved cv.css and sampleCV/ to cvBuilder, repo is now tokens-only
 - 2026-02-18 by Claude (Sonnet 4.6) [desktop] — merged CLAUDE.md into README, deleted stale token files from lifeOS, pushed sample.html to public repo, simplified architecture: px tokens, use-case CSS files, no context mapping
 - 2026-02-11 by Claude (Opus 4.6) [laptop] — designed contextual token mapping (now removed)
-- 2026-02-10 by Claude (Sonnet 4.5) [desktop] — scoped design tokens system, public repo strategy
